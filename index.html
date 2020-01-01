@@ -10,10 +10,23 @@
 </head>
 
 <body>
+    <div class="hero-bg"></div>
     <nav class="nav">
         <a href="index.html">
             <img src="./images/logo.svg" alt="logo">
         </a>
+
+        <div class="hamburger-icon">
+            <span class="hbg"></span>
+        </div>
+            <!-- <div id="hamburger" class="nav-overlay">
+                <a href="#" class="close-btn">&times;</a>
+                <div class="nav-overlay-content">
+                    
+                </div>
+            </div> -->
+
+
         <ul class="menu">
             <li><a href="#">Product</a></li>
             <li><a href="#">Features</a></li>
@@ -22,21 +35,21 @@
             <li class="menu-muted-text"><a href="#">Login</a></li>
         </ul>
     </nav>
-    <main>
-        <section class="">
-            <p>
-                <span>New</span>Monograph Dashboard
+    <main class="main">
+        <section class="product-info">
+            <p class="product-news">
+                <span class="text-highlight">New</span>Monograph Dashboard
             </p>
-                
-            <h1>Powerful insights into your team</h1>
-            <p>Project planning and time tracking for agile teams</p>
-                
-            <button>Schedule a demo</button>
-            <p>to see a live preview</p>
+            <h1 class="product-heading">Powerful insights into your team</h1>
+            <p class="product-detail">Project planning and time tracking<br/> for agile teams</p>
+            <div class="button-container">
+                <button class="btn-cta">Schedule a demo</button>
+                <p class="btn-description">to see a live preview</p>
+            </div>
         </section>
 
-        <section>
-
+        <section class="product-image">
+            <img class="illustration" src="./images/illustration-devices.svg" alt="product illustration">
         </section>
     </main>
 
@@ -48,5 +61,15 @@
             Coded by <a href="https://iris-anghel.github.io/">Iris Anghel</a>.
         </p>
     </footer>
+
+    <script>
+        const hamburgerMenuButton = document.querySelector('.hbg');
+        const mobileMenu = document.querySelector('.menu');
+        function classToggle() {
+            hamburgerMenuButton.classList.toggle('active');
+            mobileMenu.classList.toggle('visible');
+        }
+        hamburgerMenuButton.addEventListener('click', classToggle);
+    </script>
 </body>
 </html>
